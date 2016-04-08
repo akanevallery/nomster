@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+
 .booyah-box {
   -webkit-box-shadow:1px 1px 2px 0 #d0d0d0;
   -moz-box-shadow:1px 1px 2px 0 #d0d0d0;
@@ -23,5 +25,11 @@ body {
 .navbar.navbar-inverse {
     background: url('/assets/cartographer.png');
     border-radius: 0;
-    box-shadow: 5px 4px 5px 3px rgba(6,102,102,0.5);
+    box-shadow: 5px 4px 5px 3px #E3E85A;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #E3E85A;
+    font-family: 'great_vibesregular', sans-serif;
+    font-size: 26px;
 }
