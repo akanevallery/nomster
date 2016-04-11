@@ -1,8 +1,14 @@
 source 'https://rubygems.org'
 
 gem 'bootstrap-sass', '~>3.3.5.1'
+gem 'simple_form'
 gem 'sprockets', '2.11.0'
 
+
+# Paginate 
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
+gem 'will_paginate'
 
 # Rails 12factor gem 
 gem 'rails_12factor', group: :production
