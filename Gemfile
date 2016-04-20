@@ -11,6 +11,9 @@ gem 'geocoder'
 
 gem 'figaro', '>= 1.0.0'
 
+# Carrierwave 
+gem 'carrierwave'
+
 
 # Paginate 
 gem 'kaminari'
