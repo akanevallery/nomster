@@ -1,6 +1,3 @@
-User.create!([
-  {email: "akane.vallery@gmail.com", encrypted_password: "$2a$10$KomNRx7y5ljTszV45HbZYOwVfhotPBRC1nvKb6TTS/X5zVtt3SsQS", reset_password_token: "6e5f5356ed324d80d0ed845538f2ec683adacff73a7542a4f50dcf362ed7b1a5", reset_password_sent_at: "2016-04-16 12:00:42", remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2016-04-19 19:58:29", last_sign_in_at: "2016-04-18 14:38:56", current_sign_in_ip: "10.0.2.2", last_sign_in_ip: "10.0.2.2"}
-])
 Comment.create!([
   {message: "Love this place!", rating: "5 star", user_id: 1, place_id: 16},
   {message: "Great burgers! Go for the special!", rating: "5_stars", user_id: 1, place_id: 16},
