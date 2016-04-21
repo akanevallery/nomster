@@ -48,7 +48,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Add a comment</h4>
+        <h4 class="modal-title" id="myModalLabel">Add a photo</h4>
       </div>
  
       <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
@@ -105,25 +105,38 @@
 <!-- All comments -->    
 <h1 class="pull-left">Comments</h1>
 <div class="clear"></div>
-    <% @place.comments.each do |comment| %>
-        <div class="col-xs-12 col-sm-6">
-            <blockquote>
-                <% if comment.humanized_rating.present? %>
-                    <b><%= comment.humanized_rating %></b> -
-                <% end %>
-                  <%= comment.message %>
-                <small><%= comment.user.email %></small>
-            </blockquote>
-        </div>
+<% (0..@place.comments.length - 1).step(2).each do |index| %>
+  <div class='row'>
+    <div class='col-xs-12 col-sm-6'>
+      <blockquote>
+        <% if @place.comments[index].humanized_rating.present? %> 
+          <b><%= @place.comments[index].humanized_rating %> </b>
+        <% end %>
+        <%= @place.comments[index].message %>
+        <small><%= @place.comments[index].user.email %></small>
+      </blockquote>
+    </div>
+    <% if @place.comments[index + 1] %>
+    <div class='col-xs-12 col-sm-6'>
+      <blockquote>
+        <% if @place.comments[index + 1].humanized_rating.present? %>
+          <b><%= @place.comments[index + 1].humanized_rating %> </b>
+        <% end %>
+        <%= @place.comments[index + 1].message %>
+        <small><%= @place.comments[index + 1].user.email %></small>
+      </blockquote>
+      </div>
     <% end %>
+  </div>
+<% end %>
 
-
+ <div class="clear"></div>
 <!-- All photos -->
 <h1 class="pull-left">Photos</h1>
 <div class="clear"></div>
 <% @place.photos.each do |photo| %>
-    <div class="col-xs-12 col-sm-6">
-        <%= image_tag photo.picture %>
+    <div class="col-xs-12 col-sm-12">
+        <%= image_tag(photo.picture, :class => "img-responsive")%>
         <%= photo.caption %>
     </div>
 <% end %>
