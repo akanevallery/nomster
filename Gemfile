@@ -13,7 +13,8 @@ gem 'figaro', '>= 1.0.0'
 
 # Carrierwave 
 gem 'carrierwave'
-
+#fog gem for carrierwave to communicate with Amazon
+gem 'fog', '~>1.3.1'
 
 # Paginate 
 gem 'kaminari'
